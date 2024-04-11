@@ -16,7 +16,7 @@ async function fetchWorks() {
     
     })
 
-filtre(category, dataResponse)        
+filtre(category, dataResponse)
 
 }
 

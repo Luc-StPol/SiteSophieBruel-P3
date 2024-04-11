@@ -12,7 +12,7 @@
         <meta name="description" content>
         <link rel="stylesheet" href="./assets/style.css">
         <link rel="stylesheet" href="./assets/login.css">
-        <script src="script.js" defer></script>
+        <script src="authentification.js" defer></script>
     </head>
     <body>
         <header>
@@ -32,12 +32,14 @@
         <main>
             <div class="login">
                 <h2>Log In</h2>
-                <form action class="login-form">
+                <form class="login-form">
                     <div>
-                        <label for="mailInput">E-mail</label>
-                        <input type="email" name="mailInput" id="mailInput">
+                        <label for="emailInput">E-mail</label>
+                        <input type="email" name="emailInput" id="emailInput"
+                            required>
                         <label for="mdpInput">Mot de passe</label>
-                        <input type="password" name="mdpInput" id="mdpInput">
+                        <input type="password" name="mdpInput" id="mdpInput"
+                            required>
                     </div>
                     <button type="submit">Se connecter</button>
                 </form>
