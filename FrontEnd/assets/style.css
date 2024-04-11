@@ -186,3 +186,27 @@ footer nav ul {
 	margin: 2em
 }
 
+/* Filtres */
+
+#filtreForm {
+	display: flex;
+	justify-content: center;
+}
+
+#filtreForm input {
+	display: none;
+}
+
+#filtreForm label {
+	border: solid 1px #1D6154;
+	border-radius: 60px;
+	margin: 51px 5px;
+	padding: 9px 20px;
+	color: #1D6154;
+}
+
+#filtreForm label:hover {
+	background-color:  #1D6154;
+	color: white;
+}
+
