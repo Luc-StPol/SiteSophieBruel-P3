@@ -11,7 +11,12 @@
 			rel="stylesheet">
 		<meta name="description" content>
 		<link rel="stylesheet" href="./assets/style.css">
+		<link rel="stylesheet" href="./assets/index.css">
+		<script src="https://kit.fontawesome.com/d687549915.js"
+			crossorigin="anonymous"></script>
+		<script src="app.js" defer></script>
 		<script src="script.js" defer></script>
+
 	</head>
 	<body>
 		<header>
@@ -21,8 +26,8 @@
 				<ul>
 					<li>projets</li>
 					<li>contact</li>
-					<li><a class="headerlink" href="login.html">login</a></li>
-					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+					<li id="logoInsta"><img src="./assets/icons/instagram.png"
+							alt="Instagram"></li>
 				</ul>
 			</nav>
 		</header>
@@ -44,44 +49,54 @@
 				</article>
 			</section>
 			<section id="portfolio">
-				<h2>Mes Projets</h2>
+				<div><h2 class="portfolio-title">Mes Projets</h2>
+					<form id="filtreForm">
+						<label for="noFiltre">Tous</label>
+						<input type="radio" name="filtreInput" id="noFiltre" value="0">
+						<label for="objet">Objet</label>
+						<input type="radio" name="filtreInput" id="objet" value="1">
+						<label for="appart">Appartements</label>
+						<input type="radio" name="filtreInput" id="appart" value="2">
+						<label for="hotelEtResto">Hotels et restaurants</label>
+						<input type="radio" name="filtreInput" id="hotelEtResto" value="3">
+					</form>
 
-				<form id="filtreForm">
-					<label for="noFiltre">Tous</label>
-					<input type="radio" name="filtreInput" id="noFiltre" value="0">
-					<label for="objet">Objet</label>
-					<input type="radio" name="filtreInput" id="objet" value="1">
-					<label for="appart">Appartements</label>
-					<input type="radio" name="filtreInput" id="appart" value="2">
-					<label for="hotelEtResto">Hotels et restaurants</label>
-					<input type="radio" name="filtreInput" id="hotelEtResto" value="3">
-				</form>
+					<div class="gallery" id="gallery">
 
-				<div class="gallery" id="gallery">
+					</div>
+				</section>
+				<section id="contact">
+					<h2>Contact</h2>
+					<p>Vous avez un projet ? Discutons-en !</p>
+					<form action="#" method="post">
+						<label for="name">Nom</label>
+						<input type="text" name="name" id="name">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" cols="30" rows="10"></textarea>
+						<input type="submit" value="Envoyer">
+					</form>
+				</section>
 
-				</div>
-			</section>
-			<section id="contact">
-				<h2>Contact</h2>
-				<p>Vous avez un projet ? Discutons-en !</p>
-				<form action="#" method="post">
-					<label for="name">Nom</label>
-					<input type="text" name="name" id="name">
-					<label for="email">Email</label>
-					<input type="email" name="email" id="email">
-					<label for="message">Message</label>
-					<textarea name="message" id="message" cols="30" rows="10"></textarea>
-					<input type="submit" value="Envoyer">
-				</form>
-			</section>
-		</main>
+				<aside class="modal" id="modal1" aria-hidden="true" role="dialog"
+					style="display: none;">
+					<div class="modal-wrapper js-modal-stop">
+						<button class="modal-close js-modal-close"> <i
+								class="fa-solid fa-xmark fa-2x"></i> </button>
 
-		<footer>
-			<nav>
-				<ul>
-					<li>Mentions Légales</li>
-				</ul>
-			</nav>
-		</footer>
-	</body>
-</html>
+						<div class="modal-content"></div>
+					</div>
+
+				</aside>
+			</main>
+
+			<footer>
+				<nav>
+					<ul>
+						<li>Mentions Légales</li>
+					</ul>
+				</nav>
+			</footer>
+		</body>
+	</html>
